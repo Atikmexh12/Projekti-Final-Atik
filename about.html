@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Store - Home</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+      .hero-bg {
+        background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #0ea5e9;
+        transition: width 0.3s;
+      }
+      .nav-link:hover:after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50">
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-16">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 font-bold text-2xl text-slate-900"
+          >
+            <i class="fa-solid fa-store text-sky-500"></i>
+            <span>Nova</span>
+          </a>
+          <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a
+              href="index.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >Home</a
+            >
+            <a
+              href="shop.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >Shop</a
+            >
+            <a
+              href="blog.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >Blog</a
+            >
+            <a
+              href="about.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >Contact</a
+            >
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="cart.html"
+              class="flex items-center gap-2 hover:text-sky-600 relative"
+            >
+              <i class="fa-solid fa-shopping-cart text-2xl"></i>
+              <span
+                id="cart-count"
+                class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full"
+                >0</span
+              >
+            </a>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t px-6 py-4"
+      >
+        <a href="index.html" class="block py-3 text-slate-700">Home</a>
+        <a href="shop.html" class="block py-3 text-slate-700">Shop</a>
+        <a href="blog.html" class="block py-3 text-slate-700">Blog</a>
+        <a href="about.html" class="block py-3 text-slate-700">About</a>
+        <a href="contact.html" class="block py-3 text-slate-700">Contact</a>
+      </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="max-w-2xl mx-auto text-center">
+        <h1 class="text-5xl font-semibold">Rreth Nova Store</h1>
+        <p class="mt-6 text-x1 text-slate-600">Nova Store u krijua ne 2025 nga nje grup studentesh pasionat per teknologji
+        </p>
+
+        <div class="mt-12 grid grid-cols-2 gap-8">
+          <div class="text-left bg-white p-8 rounded-3xl">
+            <i class="fa-solid fa-users text-4xl text-sky-500 mb-4"></i>
+            <h3 class="font-semibold">Ekipi yne</h3>
+            <p class="text-slate-600">
+              5 student nga Coddy School qe duan te ndimojn bashkmoshataret e tyre
+            </p>
+          </div>
+          <div class="text-left bg-white p-8 rounded-3xl">
+            <i class="fa-solid fa-leaf text-4xl text-emerald-500 mb-4"></i>
+            <h3 class="font-semibold">Misioni</h3>
+            <p class="text-slate-600">
+             Te bejme blerjen online te thjeshte, te sigurt dhe argetuese
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--FOOTER-->
+    <footer class="bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 text-2xl font-bold mb-4">
+            <i class="fa-solid fa-store text-sky-500"></i> Nova
+          </div>
+          <p class="text-slate-400">
+            Dyqani yt digjital për aksesorë teknologjikë.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Faqet</h4>
+          <a href="shop.html" class="block text-slate-400 hover:text-white py-1"
+            >Shop</a
+          >
+          <a href="blog.html" class="block text-slate-400 hover:text-white py-1"
+            >Blog</a
+          >
+          <a
+            href="about.html"
+            class="block text-slate-400 hover:text-white py-1"
+            >About</a
+          >
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Ndihme</h4>
+          <a
+            href="contact.html"
+            class="block text-slate-400 hover:text-white py-1"
+            >Contact</a
+          >
+          <a href="#" class="block text-slate-400 hover:text-white py-1"
+            >Si te porosis</a
+          >
+          <a href="#" class="block text-slate-400 hover:text-white py-1"
+            >Pyetje te shpeshta</a
+          >
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Na ndiqni</h4>
+          <div class="flex gap-4 text-2xl">
+            <i
+              class="fa-brands fa-instagram cursor-pointer hover:text-sky-400"
+            ></i>
+            <i
+              class="fa-brands fa-facebook cursor-pointer hover:text-sky-400"
+            ></i>
+            <i
+              class="fa-brands fa-tiktok cursor-pointer hover:text-sky-400"
+            ></i>
+          </div>
+          <p class="text-xs text-slate-500 mt-8">
+            © 2026 Nova Store. Të gjitha të drejtat të rezervuara.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

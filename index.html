@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Store - Home</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: url("https://ae.ahmedalmaghribi.com/_next/image?url=https%3A%2F%2Fadmin.ahmedalmaghribi.com%2Fpublic%2Fstorage%2Fproduct-notes-images%2Fbin-shaikh%2Fbase-notes.jpg&w=1080&q=75") no-repeat center center fixed;
+  background-size: cover;
+}
+.hero-bg {
+  background: transparent;
+}
+      .nav-link {
+        position: relative;
+      }
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #0ea5e9;
+        transition: width 0.3s;
+      }
+      .nav-link:hover:after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50">
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-16">
+          <a
+            href="index.html"
+            class="flex items-center gap-2 font-bold text-2xl text-slate-900"
+          >
+            <i class="fa-solid fa-store text-sky-500"></i>
+            <span>Nova</span>
+          </a>
+          <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a
+              href="index.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >Home</a
+            >
+            <a
+              href="shop.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >Shop</a
+            >
+            <a
+              href="blog.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >Blog</a
+            >
+            <a
+              href="about.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >About</a
+            >
+            <a
+              href="contact.html"
+              class="nav-link text-slate-700 hover:text-sky-600"
+              >Contact</a
+            >
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="cart.html"
+              class="flex items-center gap-2 hover:text-sky-600 relative"
+            >
+              <i class="fa-solid fa-shopping-cart text-2xl"></i>
+              <span
+                id="cart-count"
+                class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full"
+                >0</span
+              >
+            </a>
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t px-6 py-4"
+      >
+        <a href="index.html" class="block py-3 text-slate-700">Home</a>
+        <a href="shop.html" class="block py-3 text-slate-700">Shop</a>
+        <a href="blog.html" class="block py-3 text-slate-700">Blog</a>
+        <a href="about.html" class="block py-3 text-slate-700">About</a>
+        <a href="contact.html" class="block py-3 text-slate-700">Contact</a>
+      </div>
+    </nav>
+
+    <section class="hero-bg text-white py-20">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <h1 class="text-5xl md:text-6xl font-semibold leading-tight">
+            Zbuloni teknologjinë <br />
+            më të mirë për ty
+          </h1>
+          <p class="mt-6 text-xl text-sky-100">
+            Produkte cilësore, çmime të lira dhe dorëzim i shpejtë. Shop tani!
+          </p>
+          <div class="mt-8 flex gap-4">
+            <a
+              href="shop.html"
+              class="bg-white text-sky-600 px-8 py-4 rounded-2xl font-semibold flex items-center gap-2 hover:bg-sky-50"
+            >
+              <i class="fa-solid fa-store"></i>
+              Shko ne shop
+            </a>
+
+            <a
+              href="about.html"
+              class="border border-white/70 px-8 py-4 rounded-2xl font-semibold hover:bg-white/10"
+              >Meso me shume</a
+            >
+          </div>
+          <div class="mt-10 flex items-center gap-8 text-sm">
+            <div class="flex -space-x-4">
+              <div
+                class="w-8 h-8 bg-white/20 backdrop-blur rounded-2xl border border-white/30 flex items-center justify-center text-xs"
+              >
+                ⭐
+              </div>
+              <div
+                class="w-8 h-8 bg-white/20 backdrop-blur rounded-2xl border border-white/30 flex items-center justify-center text-xs"
+              >
+                ⭐
+              </div>
+              <div
+                class="w-8 h-8 bg-white/20 backdrop-blur rounded-2xl border border-white/30 flex items-center justify-center text-xs"
+              >
+                ⭐
+              </div>
+            </div>
+            <p class="text-sky-100">Mbi 12,459 klientë të lumtur</p>
+          </div>
+        </div>
+        <div class="hidden md:block">
+  <img
+    src="images.jpg"
+    alt="Hero"
+    class="rounded-3xl shadow-2xl"
+  />
+</div>
+      </div>
+    </section>
+
+    <!--FEATURED PRODUCTS-->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+      <div class="flex justify-between items-end mb-8">
+        <h2 class="text-3xl font-semibold">Produkte te zgjedhura</h2>
+        <a
+          href="shop.html"
+          class="text-sky-600 flex items-center gap-2 hover:gap-3 transition-all"
+          >Shiko te gjitha
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      <div
+        id="featured-products"
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+        <!--Mbushet me JS-->
+      </div>
+    </section>
+
+    <!--Why choose us-->
+    <section class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div class="flex flex-col items-center">
+            <div
+              class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa-solid fa-truck-fast text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-xl">Dorezim falas</h3>
+            <p class="text-slate-600 mt-2">Per porosi mbi 50$</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa-solid fa-shield-halved text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-xl">Garanci 1 vit</h3>
+            <p class="text-slate-600 mt-2">Siguri për çdo produkt</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div
+              class="w-14 h-14 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center mb-4"
+            >
+              <i class="fa-solid fa-rotate-left text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-xl">Kthim 30 ditë</h3>
+            <p class="text-slate-600 mt-2">Pa pyetje</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 text-2xl font-bold mb-4">
+            <i class="fa-solid fa-store text-sky-500"></i> Nova
+          </div>
+          <p class="text-slate-400">
+            Dyqani yt digjital për aksesorë teknologjikë.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Faqet</h4>
+          <a href="shop.html" class="block text-slate-400 hover:text-white py-1"
+            >Shop</a
+          >
+          <a href="blog.html" class="block text-slate-400 hover:text-white py-1"
+            >Blog</a
+          >
+          <a
+            href="about.html"
+            class="block text-slate-400 hover:text-white py-1"
+            >About</a
+          >
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Ndihme</h4>
+          <a
+            href="contact.html"
+            class="block text-slate-400 hover:text-white py-1"
+            >Contact</a
+          >
+          <a href="#" class="block text-slate-400 hover:text-white py-1"
+            >Si te porosis</a
+          >
+          <a href="#" class="block text-slate-400 hover:text-white py-1"
+            >Pyetje te shpeshta</a
+          >
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Na ndiqni</h4>
+          <div class="flex gap-4 text-2xl">
+            <i
+              class="fa-brands fa-instagram cursor-pointer hover:text-sky-400"
+            ></i>
+            <i
+              class="fa-brands fa-facebook cursor-pointer hover:text-sky-400"
+            ></i>
+            <i
+              class="fa-brands fa-tiktok cursor-pointer hover:text-sky-400"
+            ></i>
+          </div>
+          <p class="text-xs text-slate-500 mt-8">
+            © 2026 Nova Store. Të gjitha të drejtat të rezervuara.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+  </body>
+</html>
+
+  </body>
+</html>
