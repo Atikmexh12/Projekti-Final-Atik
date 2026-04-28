@@ -23,59 +23,9 @@ const products = [
 const blogPosts = [
     {
         id: 1,
-        title: "Si të zgjedhësh kufje wireless të mira në 2026",
+        title: "Pse parfumi është më shumë se një aromë",
         excerpt:
-            "Këshilla praktike për të mos u mashtruar nga marketingu dhe për të blerë kufje që vërtet ia vlejnë.",
-        image: "https://picsum.photos/id/1015/600/400",
-        date: "28 Mars 2026",
-        readTime: "5 min",
-        link: "https://en.wikipedia.org/wiki/Headphones", // Wikipedia
-    },
-    {
-        id: 2,
-        title: "5 mënyra për të mbrojtur telefonin tënd nga dëmtimi",
-        excerpt:
-            "Si të zgjasësh jetën e telefonit tënd me aksesorët e duhur dhe zakone të mira.",
-        image: "https://picsum.photos/id/201/600/400",
-        date: "27 Mars 2026",
-        readTime: "4 min",
-        link: "https://www.google.com/search?q=si+t%C3%AB+mbrojm%C3%AB+telefonin", // Google search
-    },
-    {
-        id: 3,
-        title: "Smartwatch vs Orë klasike – Çfarë zgjedhin të rinjtë?",
-        excerpt:
-            "Krahasim i plotë midis smartwatch dhe orëve tradicionale. Cila është më e mira për ty?",
-        image: "https://picsum.photos/id/29/600/400",
-        date: "25 Mars 2026",
-        readTime: "7 min",
-        link: "https://en.wikipedia.org/wiki/Smartwatch",
-    },
-    {
-        id: 4,
-        title: "Çfarë është Noise Cancelling dhe a ia vlen?",
-        excerpt:
-            "Shpjegim i thjeshtë se si funksionon anulimi i zhurmës dhe cilat kufje e kanë më të mirë.",
-        image: "https://picsum.photos/id/237/600/400",
-        date: "23 Mars 2026",
-        readTime: "6 min",
-        link: "https://en.wikipedia.org/wiki/Active_noise_control",
-    },
-    {
-        id: 5,
-        title: "Si të zgjedhësh Power Bank të mirë?",
-        excerpt:
-            "Çfarë duhet të shikosh kur blen një power bank (kapaciteti, shpejtësia, siguria).",
-        image: "https://picsum.photos/id/180/600/400",
-        date: "20 Mars 2026",
-        readTime: "4 min",
-        link: "https://www.google.com/search?q=best+power+bank+2026",
-    },
-    {
-        id: 6,
-        title: "Si të zgjedhësh kufje wireless të mira në 2026",
-        excerpt:
-            "Këshilla praktike për të mos u mashtruar nga marketingu dhe për të blerë kufje që vërtet ia vlejnë.",
+            "Parfumi nuk është vetëm një aromë – është një mënyrë për të shprehur personalitetin tënd. Një fragrancë e zgjedhur mirë mund të lërë përshtypje të fortë dhe të kujtohet gjatë. Në dyqanin tonë të parfumeve, ne ofrojmë aroma për çdo stil: nga të freskëta dhe sportive, deri te ato elegante dhe luksoze. Zgjidh parfumin që flet për ty.",
         image: "https://picsum.photos/id/1015/600/400",
         date: "28 Mars 2026",
         readTime: "5 min",
@@ -94,34 +44,20 @@ function renderBlogPosts() {
     //i krijon kartat se si duken
     blogPosts.forEach((post) => {
         html += `
-                <div class="blog-card bg-white rounded-3xl overflow-hidden shadow-sm cursor-pointer" 
-                     onclick="window.open('${post.link}', '_blank')">
-                    
-                    <div class="relative">
-                        <img src="${post.image}" 
-                             class="w-full h-56 object-cover transition-transform duration-300">
-                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-2xl text-xs font-medium">
-                            ${post.readTime}
-                        </div>
-                    </div>
+                <div class="blog-card bg-black rounded-3xl overflow-hidden shadow-sm border border-white/10">
                     
                     <div class="p-6">
-                        <div class="flex justify-between text-xs text-slate-500 mb-3">
+                        <div class="flex justify-between text-xs text-white/70 mb-3">
                             <span>${post.date}</span>
                         </div>
                         
-                        <h3 class="font-semibold text-xl leading-tight mb-3 line-clamp-2">
+                        <h3 class="font-semibold text-xl leading-tight mb-3">
                             ${post.title}
                         </h3>
                         
-                        <p class="text-slate-600 text-[15px] line-clamp-3">
+                        <p class="text-white text-[15px]">
                             ${post.excerpt}
                         </p>
-                        
-                        <div class="mt-6 flex items-center text-sky-600 text-sm font-medium">
-                            Lexo më shumë 
-                            <i class="fa-solid fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
-                        </div>
                     </div>
                 </div>`;
     });
@@ -262,7 +198,7 @@ function filterCategory(cat, btn) {
     // hiq active nga të gjithë
     document.querySelectorAll('.filter-btn').forEach(b => {
         b.classList.remove('bg-sky-600', 'text-white');
-        b.classList.add('bg-white', 'border');
+        b.classList.add('bg-amber-700', 'border');
     });
 
     // vendos active vetëm te ai që u klikua
@@ -282,13 +218,13 @@ function renderProducts(category = 'all') {
     let html = '';
     filtered.forEach(product => {
         html += `
-        <div class="product-card bg-white rounded-3xl overflow-hidden border hover:shadow-xl transition-all">
+        <div class="product-card bg-black rounded-3xl overflow-hidden border hover:shadow-xl transition-all">
             <img src="${product.img}" class="w-full h-56 object-cover">
             <div class="p-6">
                 <h3 class="font-semibold text-lg leading-tight">${product.name}</h3>
                 <p class="text-2xl font-bold text-sky-600 mt-2">${product.price.toFixed(2)} €</p>
                 <button onclick="addToCart(${product.id})" 
-                        class="mt-6 w-full bg-sky-600 hover:bg-sky-700 text-white py-4 rounded-2xl font-medium flex items-center justify-center gap-2 transition-colors">
+                        class="mt-6 w-full bg-white hover:bg-gray-100 text-black py-4 rounded-2xl font-medium flex items-center justify-center gap-2 transition-colors">
                     <i class="fa-solid fa-cart-plus"></i>
                     Shto në shportë
                 </button>
@@ -329,13 +265,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         featuredProducts.forEach(product => {
             html += `
-            <div class="product-card bg-white rounded-3xl overflow-hidden border hover:shadow-xl transition-all">
+            <div class="product-card bg-black rounded-3xl overflow-hidden border hover:shadow-xl transition-all">
                 <img src="${product.img}" class="w-full h-56 object-cover">
                 <div class="p-6">
                     <h3 class="font-semibold text-lg">${product.name}</h3>
                     <p class="text-2xl font-bold text-sky-600 mt-2">${product.price.toFixed(2)} €</p>
                     <button onclick="addToCart(${product.id})" 
-                            class="mt-6 w-full bg-sky-600 hover:bg-sky-700 text-white py-4 rounded-2xl font-medium flex items-center justify-center gap-2">
+                            class="mt-6 w-full bg-white hover:bg-gray-100 text-black py-4 rounded-2xl font-medium flex items-center justify-center gap-2">
                         <i class="fa-solid fa-cart-plus"></i>
                         Shto në shportë
                     </button>

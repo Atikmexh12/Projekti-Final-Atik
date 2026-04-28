@@ -15,6 +15,9 @@
     <style>
       body {
         font-family: "Inter", system-ui, sans-serif;
+        background: url("wp2632423.jpg") no-repeat center center fixed;
+        background-size: cover;
+        color: white;
       }
       .hero-bg {
         background: linear-gradient(135deg, #0ea5e9, #3b82f6);
@@ -38,7 +41,7 @@
     </style>
   </head>
   <body class="bg-slate-50">
-    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+    <nav class="bg-black border-b sticky top-0 z-50 shadow-sm">
       <div class="max-w-7xl mx-auto px-6">
         <div class="flex justify-between items-center h-16">
           <a
@@ -95,7 +98,7 @@
       </div>
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-white border-t px-6 py-4"
+        class="hidden md:hidden bg-amber-700 border-t px-6 py-4"
       >
         <a href="index.html" class="block py-3 text-slate-700">Home</a>
         <a href="shop.html" class="block py-3 text-slate-700">Shop</a>
@@ -112,16 +115,16 @@
       </p>
       <div class="flex gap-2 mb-8 flex-wrap">
         <button
-          onclick="filterCategory('summer', this)"
-          class="filter-btn px-5 py-2 bg-white border rounded-2xl text-sm font-medium"
+          onclick="filterCategory('Summer', this)"
+          class="filter-btn px-5 py-2 bg-black border rounded-2xl text-sm font-medium"
         >
-          Te gjitha
+          Summer
         </button>
         <button
-          onclick="filterCategory('winter', this)"
-          class="filter-btn px-5 py-2 bg-white border rounded-2xl text-sm font-medium"
+          onclick="filterCategory('Winter', this)"
+          class="filter-btn px-5 py-2 bg-black border rounded-2xl text-sm font-medium"
         >
-          audio
+          Winter
         </button>
         
       </div>
